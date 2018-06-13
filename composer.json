@@ -1,0 +1,23 @@
+{
+  "name": "swoft-yii2",
+  "type": "library",
+  "keywords": [
+    "php",
+    "swoole",
+    "swoft",
+    "yii2"
+  ],
+  "description": "",
+  "license": "Apache-2.0",
+  "require": {
+    "php": ">=7.0",
+    "swoft/framework": "^1.0",
+    "swoft/http-server": "^1.0",
+    "deepziyu/yii2-swoole": "*"
+  },
+  "autoload": {
+    "psr-4": {
+      "deepziyu\\swoft\\yii\\": "src/"
+    }
+  }
+}
