@@ -35,13 +35,11 @@ class YiiWeb
     public function onWorkerStart(Server $server, int $workerId, bool $isWorker)
     {
         if(!$isWorker){
-            $this->enable = false;
-            return false;
+            return $this->enable = false;
         }
 
         if(!$server instanceof HttpServer){
-            $this->enable = false;
-            return false;
+            return $this->enable = false;
         }
 
         $config = App::getProperties();
@@ -51,13 +49,12 @@ class YiiWeb
             $this->debug = $yiiConfig['debug'];
             $this->env = $yiiConfig['env'];
         }else{
-            $this->enable = false;
-            return false;
+            return $this->enable = false;
         }
 
         defined('YII_DEBUG') or define('YII_DEBUG', $this->debug);
         defined('YII_ENV') or define('YII_ENV', $this->env);
-        define('YII_ENABLE_ERROR_HANDLER',false); //必须关闭 Yii 的错误处理器
+        defined('YII_ENABLE_ERROR_HANDLER') or define('YII_ENABLE_ERROR_HANDLER',false); //必须关闭 Yii 的错误处理器
 
         $path = App::getAlias('@vendor/deepziyu/yii2-swoole/Yii.php');
         require_once($path);

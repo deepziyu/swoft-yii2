@@ -2,7 +2,7 @@
 
 完美滴在 swoft 框架中使用 yii2 的组件。
 
-_此插件依赖于[yii2-swoole](https://github.com/deepziyu/yii2-swoole)实现_
+_此插件依赖于 [yii2-swoole](https://github.com/deepziyu/yii2-swoole) 实现_
 
 ## 已支持的组件
 
@@ -30,7 +30,7 @@ _此插件依赖于[yii2-swoole](https://github.com/deepziyu/yii2-swoole)实现_
 }
 ```
 
-
+- 次插件依赖 Yii2-framework ，所以 composer 安装 Yii2 时会出现一些问题，具体解决方法参考 [Yii2-installation](https://www.yiiframework.com/doc/guide/2.0/zh-cn/start-installationinstallation)。
 - 执行 `$ php composer.phar update` 或 `$ composer update` 进行安装。
 
 ## 配置
@@ -132,6 +132,8 @@ return [
 - 没有支持的组件最好不要用，嘿，容易出问题滴
 
 - 我们不支持各种 defer 特性
+
+- 此插件目前仅在 Swoole\Http\Server 模式下加载 
 
 
 ## Chat && Help
